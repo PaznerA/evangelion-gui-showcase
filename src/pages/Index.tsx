@@ -58,12 +58,11 @@ const Index = () => {
             </p>
             <div className="flex gap-3 items-center">
               <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`${import.meta.env.BASE_URL}theme.css`}
+                download="theme.css"
                 className="nerv-btn nerv-btn-active"
               >
-                ↓ DOWNLOAD THEME
+                ↓ DOWNLOAD THEME.CSS
               </a>
               <a href="#components" className="nerv-btn">
                 VIEW COMPONENTS
