@@ -1,105 +1,624 @@
+@import "@fontsource/roboto-mono/400.css";
+@import "@fontsource/roboto-mono/700.css";
+@import "@fontsource/heebo/400.css";
+@import "@fontsource/heebo/700.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 82%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 10% 13%;
+    --card-foreground: 0 0% 82%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 10% 13%;
+    --popover-foreground: 0 0% 82%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 24 100% 50%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 10% 13%;
+    --secondary-foreground: 0 0% 82%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 10% 18%;
+    --muted-foreground: 0 0% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 185 100% 50%;
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 7 100% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 24 100% 50%;
+    --input: 24 100% 50%;
+    --ring: 185 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0px;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 220 10% 13%;
+    --sidebar-foreground: 0 0% 82%;
+    --sidebar-primary: 185 100% 50%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 220 10% 18%;
+    --sidebar-accent-foreground: 0 0% 82%;
+    --sidebar-border: 24 100% 50%;
+    --sidebar-ring: 185 100% 50%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --font-mono: "Roboto Mono", monospace;
+    --font-body: "Heebo", sans-serif;
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --warning: 7 100% 55%;
+    --system-cyan: 185 100% 50%;
+    --alert-orange: 24 100% 50%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 82%;
+    --card: 220 10% 13%;
+    --card-foreground: 0 0% 82%;
+    --popover: 220 10% 13%;
+    --popover-foreground: 0 0% 82%;
+    --primary: 24 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 220 10% 13%;
+    --secondary-foreground: 0 0% 82%;
+    --muted: 220 10% 18%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 185 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 7 100% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 24 100% 50%;
+    --input: 24 100% 50%;
+    --ring: 185 100% 50%;
+    --radius: 0px;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+    border-radius: 0 !important;
   }
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  code, pre {
+    font-family: var(--font-mono);
+  }
+
+  hr {
+    border: none;
+    height: 2px;
+    background: hsl(var(--primary));
+    box-shadow: 0 0 8px hsl(var(--destructive) / 0.6);
+  }
+
+  ::selection {
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+}
+
+@layer components {
+  .nerv-section-label {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: hsl(var(--muted-foreground));
+    border-bottom: 1px solid hsl(var(--primary) / 0.3);
+    padding-bottom: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .nerv-grid-col {
+    border-left: 1px solid hsl(var(--primary) / 0.4);
+  }
+
+  .nerv-grid-col:first-child {
+    border-left: none;
+  }
+
+  .nerv-input-wrapper {
+    position: relative;
+  }
+
+  .nerv-input-wrapper:focus-within::before {
+    content: "INPUT ACTIVE █";
+    position: absolute;
+    left: -0.5rem;
+    top: 50%;
+    transform: translateY(-50%) translateX(-100%);
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    color: hsl(var(--accent));
+    white-space: nowrap;
+    animation: blink-cursor 1s step-end infinite;
+  }
+
+  @keyframes blink-cursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .nerv-scanline {
+    position: relative;
+  }
+
+  .nerv-scanline::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(0 0% 0% / 0.03) 2px,
+      hsl(0 0% 0% / 0.03) 4px
+    );
+    pointer-events: none;
+  }
+
+  .nerv-badge {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid;
+  }
+
+  .nerv-badge-ok {
+    border-color: hsl(var(--accent));
+    color: hsl(var(--accent));
+  }
+
+  .nerv-badge-warn {
+    border-color: hsl(var(--primary));
+    color: hsl(var(--primary));
+  }
+
+  .nerv-badge-danger {
+    border-color: hsl(var(--destructive));
+    color: hsl(var(--destructive));
+    animation: pulse-danger 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-danger {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+
+  .nerv-btn {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid hsl(var(--primary));
+    background: transparent;
+    color: hsl(var(--foreground));
+    cursor: pointer;
+    transition: background 0.1s, color 0.1s;
+  }
+
+  .nerv-btn:hover {
+    background: hsl(var(--primary) / 0.15);
+  }
+
+  .nerv-btn-danger {
+    border-color: hsl(var(--destructive));
+    color: hsl(var(--destructive));
+  }
+
+  .nerv-btn-danger:hover {
+    background: hsl(var(--destructive));
+    color: hsl(var(--destructive-foreground));
+  }
+
+  .nerv-btn-active {
+    border-color: hsl(var(--accent));
+    color: hsl(var(--accent));
+  }
+
+  .nerv-btn-active:hover {
+    background: hsl(var(--accent) / 0.15);
+  }
+
+  .nerv-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--primary));
+    padding: 1rem;
+  }
+
+  .nerv-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  .nerv-table th {
+    text-align: left;
+    padding: 0.5rem;
+    border-bottom: 2px solid hsl(var(--primary));
+    color: hsl(var(--primary));
+    letter-spacing: 0.1em;
+  }
+
+  .nerv-table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid hsl(var(--primary) / 0.2);
+    color: hsl(var(--foreground));
+  }
+
+  .nerv-table tr:hover td {
+    background: hsl(var(--primary) / 0.05);
+  }
+
+  .nerv-input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid hsl(var(--primary) / 0.4);
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+    padding: 0.5rem 0.25rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+
+  .nerv-input:focus {
+    border-bottom-color: hsl(var(--accent));
+  }
+
+  .nerv-input::placeholder {
+    color: hsl(var(--muted-foreground));
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+  }
+
+  .nerv-alert {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 0.75rem 1rem;
+    border-left: 3px solid;
+  }
+
+  .nerv-alert-info {
+    border-color: hsl(var(--accent));
+    background: hsl(var(--accent) / 0.05);
+    color: hsl(var(--accent));
+  }
+
+  .nerv-alert-warning {
+    border-color: hsl(var(--primary));
+    background: hsl(var(--primary) / 0.05);
+    color: hsl(var(--primary));
+  }
+
+  .nerv-alert-danger {
+    border-color: hsl(var(--destructive));
+    background: hsl(var(--destructive) / 0.05);
+    color: hsl(var(--destructive));
+  }
+
+  .nerv-progress-bar {
+    height: 6px;
+    background: hsl(var(--muted));
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nerv-progress-fill {
+    height: 100%;
+    transition: width 0.5s;
+  }
+
+  .nerv-progress-fill-ok {
+    background: hsl(var(--accent));
+    box-shadow: 0 0 6px hsl(var(--accent) / 0.5);
+  }
+
+  .nerv-progress-fill-warn {
+    background: hsl(var(--primary));
+    box-shadow: 0 0 6px hsl(var(--primary) / 0.5);
+  }
+
+  .nerv-progress-fill-danger {
+    background: hsl(var(--destructive));
+    box-shadow: 0 0 6px hsl(var(--destructive) / 0.5);
+  }
+
+  .nerv-nav {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid hsl(var(--primary));
+  }
+
+  .nerv-nav-item {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    padding: 0.5rem 1rem;
+    color: hsl(var(--muted-foreground));
+    border-right: 1px solid hsl(var(--primary) / 0.3);
+    cursor: pointer;
+    transition: color 0.15s, background 0.15s;
+  }
+
+  .nerv-nav-item:hover {
+    color: hsl(var(--foreground));
+    background: hsl(var(--primary) / 0.05);
+  }
+
+  .nerv-nav-item-active {
+    color: hsl(var(--accent));
+    border-bottom: 2px solid hsl(var(--accent));
+    margin-bottom: -2px;
+  }
+
+  .nerv-select {
+    background: transparent;
+    border: 1px solid hsl(var(--primary));
+    color: hsl(var(--foreground));
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    padding: 0.5rem;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .nerv-select:focus {
+    border-color: hsl(var(--accent));
+  }
+
+  .nerv-checkbox {
+    width: 16px;
+    height: 16px;
+    appearance: none;
+    border: 1px solid hsl(var(--primary));
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .nerv-checkbox:checked {
+    border-color: hsl(var(--accent));
+    background: hsl(var(--accent));
+  }
+
+  .nerv-checkbox:checked::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 4px;
+    height: 8px;
+    border: solid hsl(var(--accent-foreground));
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  .nerv-tooltip {
+    position: relative;
+  }
+
+  .nerv-header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 2px solid hsl(var(--primary));
+    font-family: var(--font-mono);
+  }
+
+  .nerv-breadcrumb {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: hsl(var(--muted-foreground));
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .nerv-breadcrumb-active {
+    color: hsl(var(--accent));
+  }
+
+  .nerv-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: hsl(0 0% 0% / 0.85);
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+  }
+
+  .nerv-modal {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--primary));
+    width: 100%;
+    max-width: 500px;
+    height: fit-content;
+    animation: modal-drop 0.2s ease-out;
+  }
+
+  @keyframes modal-drop {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .nerv-modal-header {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid hsl(var(--primary));
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: hsl(var(--primary));
+  }
+
+  .nerv-modal-body {
+    padding: 1rem;
+  }
+
+  .nerv-modal-footer {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid hsl(var(--primary) / 0.3);
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+  }
+
+  .nerv-list-group-item {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid hsl(var(--primary) / 0.2);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nerv-list-group-item:last-child {
+    border-bottom: none;
+  }
+
+  .nerv-pagination {
+    display: flex;
+    gap: 0;
+  }
+
+  .nerv-pagination-item {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 0.4rem 0.75rem;
+    border: 1px solid hsl(var(--primary));
+    color: hsl(var(--foreground));
+    cursor: pointer;
+    margin-left: -1px;
+  }
+
+  .nerv-pagination-item:hover {
+    background: hsl(var(--primary) / 0.1);
+  }
+
+  .nerv-pagination-item-active {
+    background: hsl(var(--accent) / 0.1);
+    border-color: hsl(var(--accent));
+    color: hsl(var(--accent));
+  }
+
+  .nerv-dropdown {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--primary));
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    min-width: 160px;
+  }
+
+  .nerv-dropdown-item {
+    padding: 0.4rem 0.75rem;
+    cursor: pointer;
+    color: hsl(var(--foreground));
+    letter-spacing: 0.05em;
+  }
+
+  .nerv-dropdown-item:hover {
+    background: hsl(var(--primary) / 0.1);
+    color: hsl(var(--accent));
+  }
+
+  .nerv-dropdown-divider {
+    height: 1px;
+    background: hsl(var(--primary) / 0.3);
+  }
+
+  .nerv-accordion-header {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid hsl(var(--primary) / 0.3);
+    border-bottom: none;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: hsl(var(--foreground));
+  }
+
+  .nerv-accordion-header:hover {
+    background: hsl(var(--primary) / 0.05);
+  }
+
+  .nerv-accordion-body {
+    padding: 0.75rem;
+    border: 1px solid hsl(var(--primary) / 0.3);
+    border-top: none;
+    font-size: 0.8rem;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .nerv-spinner {
+    width: 24px;
+    height: 24px;
+    border: 2px solid hsl(var(--primary) / 0.2);
+    border-top-color: hsl(var(--accent));
+    animation: spin 0.8s linear infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .nerv-toast {
+    position: fixed;
+    top: 10vh;
+    right: 1rem;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--primary));
+    padding: 0.75rem 1rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    min-width: 250px;
+    z-index: 100;
+    animation: modal-drop 0.2s ease-out;
   }
 }
