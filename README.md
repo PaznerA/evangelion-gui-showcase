@@ -1,73 +1,104 @@
-# Welcome to your Lovable project
+# Terminal Condition — Evangelion GUI CSS Theme
 
-## Project info
+A CSS theme inspired by the NERV tactical interface from *Neon Genesis Evangelion*.  
+No gradients. No rounded corners. No mercy.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+![Preview](https://img.shields.io/badge/style-NERV-ff6500?style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-00f0ff?style=flat-square)
 
-## How can I edit this code?
+## 🔴 Live Demo
 
-There are several ways of editing your application.
+👉 **[View Showcase](https://YOUR_USERNAME.github.io/YOUR_REPO/)**
 
-**Use Lovable**
+## ⬇️ Download
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Grab the standalone CSS file: **[theme.css](https://YOUR_USERNAME.github.io/YOUR_REPO/theme.css)**
 
-Changes made via Lovable will be committed automatically to this repo.
+Or install via your HTML:
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```html
+<link rel="stylesheet" href="theme.css">
 ```
 
-**Edit a file directly in GitHub**
+## 🎨 Features
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Pure CSS** — no JavaScript required
+- **CRT scanline & flicker effects** — authentic retro terminal feel
+- **Radar spinner** — replaces generic loading indicators
+- **Aggressive alert animations** — danger states that demand attention
+- **Sharp geometry** — `border-radius: 0` everywhere, no exceptions
+- **3-color palette** — Alert Orange `#FF6500`, System Cyan `#00F0FF`, Critical Red `#FF351A`
+- **Monospace typography** — Roboto Mono for headings, Heebo for body
 
-**Use GitHub Codespaces**
+## 📦 Components
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+| Component | CSS Class |
+|-----------|-----------|
+| Button | `.nerv-btn`, `.nerv-btn-danger`, `.nerv-btn-active` |
+| Card | `.nerv-card` |
+| Badge | `.nerv-badge`, `.nerv-badge-ok`, `.nerv-badge-warn`, `.nerv-badge-danger` |
+| Alert | `.nerv-alert`, `.nerv-alert-info`, `.nerv-alert-warning`, `.nerv-alert-danger` |
+| Table | `.nerv-table` |
+| Input | `.nerv-input` |
+| Select | `.nerv-select` |
+| Checkbox | `.nerv-checkbox` |
+| Progress | `.nerv-progress-bar`, `.nerv-progress-fill`, `.nerv-progress-fill-ok/warn/danger` |
+| Nav | `.nerv-nav`, `.nerv-nav-item`, `.nerv-nav-item-active` |
+| Modal | `.nerv-modal-overlay`, `.nerv-modal`, `.nerv-modal-header/body/footer` |
+| Toast | `.nerv-toast` |
+| Accordion | `.nerv-accordion-header`, `.nerv-accordion-body` |
+| Pagination | `.nerv-pagination`, `.nerv-pagination-item`, `.nerv-pagination-item-active` |
+| Dropdown | `.nerv-dropdown`, `.nerv-dropdown-item` |
+| Radar/Spinner | `.nerv-radar` |
+| Breadcrumb | `.nerv-breadcrumb` |
+| List Group | `.nerv-list-group-item` |
+| CRT Overlay | `.crt-wrapper`, `.crt-flicker`, `.crt-scanline-move` |
+| Glow | `.glow-orange`, `.glow-cyan`, `.glow-red` |
 
-## What technologies are used for this project?
+## 🚀 Quick Start
 
-This project is built with:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My NERV App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body class="crt-wrapper crt-flicker">
+  <div class="crt-scanline-move"></div>
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+  <button class="nerv-btn">LAUNCH</button>
+  <button class="nerv-btn nerv-btn-danger">ABORT</button>
 
-## How can I deploy this project?
+  <div class="nerv-alert nerv-alert-danger">
+    ■ PATTERN BLUE DETECTED
+  </div>
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+  <div class="nerv-card">
+    <h3>UNIT-01</h3>
+    <span class="nerv-badge nerv-badge-ok">ACTIVE</span>
+  </div>
+</body>
+</html>
+```
 
-## Can I connect a custom domain to my Lovable project?
+## 🎯 Design Principles
 
-Yes, you can!
+1. **No border-radius** — Rounded corners imply safety. This is a tactical interface.
+2. **No gradients** — Information is binary: known or unknown, safe or dangerous.
+3. **No box-shadow for depth** — Depth is created by layering near-black surfaces and explicit borders.
+4. **No decorative icons** — Typography and structure carry the aesthetic.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📝 Fonts
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The theme uses two fonts loaded via Google Fonts:
+
+- **Roboto Mono** — headings, labels, monospace elements
+- **Heebo** — body text, paragraphs
+
+## 📄 License
+
+MIT — Use it however you want. God's in his heaven. All's right with the world.
